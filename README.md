@@ -5,6 +5,8 @@ OLAP tool for CSV files.
 
 Have you ever had a CSV file, opened with your favourite spreadsheet application, and you desired being able to work with it like in a database? Well, I did, and usually ended up by loading the file with RStudio or Jupyter+Python. But I always wanted an easier way to work with it. That's the reason I created this super simple python script.
 
+![CSV-OLAP Screenshot](csvolap_shot_1.png)
+
 ## Installation
 
 Prerequisites: Python 3 and pip.
@@ -44,8 +46,6 @@ python3 csvolap.py path/to/file.csv -l pandas
 ```
 
 Default is SQL.
-
-![CSV-OLAP Screenshot](csvolap_shot_1.png)
 
 ## Queries
 
