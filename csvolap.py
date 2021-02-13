@@ -7,6 +7,7 @@ from tkinter import *
 from pandastable import Table
 import pandasql as pdsql
 import pandas as pd
+import sys
 
 cmd_type = "sql"
 
