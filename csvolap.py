@@ -1,3 +1,8 @@
+# CSV-OLAP v0.2
+#
+# Author: asllop
+# Web: https://github.com/asllop/CSV-OLAP
+
 from tkinter import *
 from pandastable import Table
 import pandasql as pdsql
