@@ -1,4 +1,4 @@
-# CSV-OLAP v0.2
+# CSV-OLAP v0.3
 #
 # Author: asllop
 # Web: https://github.com/asllop/CSV-OLAP
@@ -33,7 +33,7 @@ if len(sys.argv) == 4:
         cmd_type = sys.argv[3].lower()
 
 window = Tk()
-window.title("CSV-OLAP v0.2")
+window.title("CSV-OLAP v0.3")
 cmd_input = Entry(window)
 cmd_input.pack(fill=X)
 cmd_input.bind("<Return>", cmd_eval)
