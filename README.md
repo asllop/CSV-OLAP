@@ -62,3 +62,7 @@ The other query language is PANDAS. It has the same syntax used in Python when w
 ```python
 model[model["Age"] >= 35]
 ```
+
+## CSV Parsing
+
+To parse the CSV files it uses Pandas `read_csv` method, with the default arguments. It also post process the DataFrame, cleaning the strings by removing the quotes and all leading and trailing whitespaces. This may be not adequate for all CSV formats. If your CSV doesn't load well, you will have to pre process it or change the parsing mechanism in the script.
