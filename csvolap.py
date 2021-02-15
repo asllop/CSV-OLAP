@@ -1,4 +1,4 @@
-# CSV-OLAP v0.3
+# CSV-OLAP v0.4
 #
 # Author: asllop
 # Web: https://github.com/asllop/CSV-OLAP
@@ -23,6 +23,13 @@ def cmd_eval(event):
         except:
             print("Invalid command!")
 
+def clean_strings(df):
+    # Remove quotes
+    df = df.rename(columns=lambda x: x.replace('"', ''))
+    # Remove leading and trailing whitespaces
+    df = df.rename(columns=lambda x: x.strip())
+    return df
+
 if len(sys.argv) < 2:
     print("Usage: " + sys.argv[0] + " CSV_FILE [-l SQL|PANDAS]")
     print()
@@ -33,7 +40,7 @@ if len(sys.argv) == 4:
         cmd_type = sys.argv[3].lower()
 
 window = Tk()
-window.title("CSV-OLAP v0.3")
+window.title("CSV-OLAP v0.4")
 cmd_input = Entry(window)
 cmd_input.pack(fill=X)
 cmd_input.bind("<Return>", cmd_eval)
@@ -41,8 +48,9 @@ parent = Frame(window)
 parent.pack(expand=1, fill=BOTH)
 
 model = pd.read_csv(sys.argv[1])
+model = clean_strings(model)
 
-pt = Table(parent, dataframe=model, quotechar='"')
+pt = Table(parent, dataframe=model)
 pt.show()
 
 if cmd_type == "sql":
