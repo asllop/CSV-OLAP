@@ -1,4 +1,4 @@
-# CSV-OLAP v0.4
+# CSV-OLAP v0.5
 #
 # Author: asllop
 # Web: https://github.com/asllop/CSV-OLAP
@@ -8,6 +8,7 @@ from pandastable import Table
 import pandasql as pdsql
 import pandas as pd
 import sys
+import ntpath
 
 cmd_type = "sql"
 
@@ -40,7 +41,7 @@ if len(sys.argv) == 4:
         cmd_type = sys.argv[3].lower()
 
 window = Tk()
-window.title("CSV-OLAP v0.4")
+window.title("CSV-OLAP v0.5 - " + ntpath.basename(sys.argv[1]))
 cmd_input = Entry(window)
 cmd_input.pack(fill=X)
 cmd_input.bind("<Return>", cmd_eval)
