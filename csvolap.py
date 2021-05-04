@@ -3,6 +3,10 @@
 # Author: asllop
 # Web: https://github.com/asllop/CSV-OLAP
 
+#TODO: show file picker when no file is selected in the command line.
+#TODO: add undo/redo arrows to go back to previous queries.
+#TODO: support mouse/trackpad scrolling in the table.
+
 from tkinter import *
 from pandastable import Table
 import pandasql as pdsql
