@@ -9,26 +9,12 @@ Have you ever had a CSV file, opened with your favourite spreadsheet application
 
 ## Installation
 
-Prerequisites: Python 3 and pip.
-
-You need the following packages.
-
-Pandas Table:
+Prerequisites: Python 3, pip and venv.
 
 ```bash
-pip3 install pandastable
-```
-
-TKinter Table:
-
-```bash
-pip3 install tkintertable
-```
-
-Pandas SQL:
-
-```bash
-pip3 install pandasql
+python3.x -m venv env # where "3.x" is a specific version in your system
+source env/bin/activate
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -36,14 +22,19 @@ pip3 install pandasql
 To run CSV-OLAP just write:
 
 ```bash
-python3 csvolap.py path/to/file.csv
+python csvolap.py path/to/file.csv
 ```
 
 You can also specify the query language you want to use, SQL or PANDAS:
 
 ```bash
-python3 csvolap.py path/to/file.csv -l pandas
+python csvolap.py path/to/file.csv -l pandas
 ```
+
+> NOTE: If you get this error on mac:
+> `ModuleNotFoundError: No module named '_tkinter'`,
+> You may need to install python-tk:
+> `brew install python-tk`
 
 Default is SQL.
 
